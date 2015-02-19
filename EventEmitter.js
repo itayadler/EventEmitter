@@ -458,12 +458,7 @@
     };
 
     // Expose the class either via AMD, CommonJS or the global object
-    if (typeof define === 'function' && define.amd) {
-        define(function () {
-            return EventEmitter;
-        });
-    }
-    else if (typeof module === 'object' && module.exports){
+    if (typeof module === 'object' && module.exports){
         module.exports = EventEmitter;
     }
     else {
